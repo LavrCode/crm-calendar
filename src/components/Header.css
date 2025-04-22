@@ -1,0 +1,220 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #191c23;
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-select {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #566e7a;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.department-label {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #191c23;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.avatar-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #566e7a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.avatar-btn:hover {
+  background-color: #7a8c9a;
+}
+
+.calendar-popup {
+  position: absolute;
+  top: 180%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 100;
+  padding-bottom: 10px;
+  max-width: 90vw;
+  width: 320px;
+  overflow: hidden;
+}
+
+.calendar-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #191c23;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.calendar-popup-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.close-calendar-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+.calendar-popup .react-datepicker {
+  border: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  font-family: inherit;
+}
+
+.calendar-popup .react-datepicker__month-container {
+  width: 100%;
+}
+
+.calendar-popup .react-datepicker__header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  padding-top: 12px;
+}
+
+.calendar-popup .react-datepicker__day-name, 
+.calendar-popup .react-datepicker__day {
+  width: 2rem;
+  line-height: 2rem;
+  margin: 0.2rem;
+}
+
+.calendar-popup .react-datepicker__day--selected, 
+.calendar-popup .react-datepicker__day--keyboard-selected {
+  background-color: #191c23;
+  border-radius: 50%;
+}
+
+.calendar-popup .react-datepicker__day:hover {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}
+
+.month-label {
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.month-label:hover {
+  transform: scale(1.1);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  color: #191c23;
+}
+
+.departments-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191c23;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 8px;
+  cursor: help;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;  
+    padding: 10px;
+    position: relative; 
+  }
+
+  .header-title {
+    font-size: 16px;
+    margin-bottom: 4px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .header-select, .department-label {
+    font-size: 12px;
+    padding: 10px 12px;
+    width: 85%;
+    margin-left: 0; 
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .header-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 50%;
+  }
+
+  .avatar-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
